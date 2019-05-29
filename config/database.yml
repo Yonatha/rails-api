@@ -1,0 +1,25 @@
+production:
+  adapter: postgresql
+  username: postgres
+  password:
+  pool: 5
+  # host: ruptiva_postgres
+  host: 172.17.0.2
+  database: ruptiva_production
+
+development:
+  adapter: postgresql
+  username: postgres
+  password:
+  # host: ruptiva_postgres
+  host: 172.17.0.2
+  pool: 5
+  database: ruptiva_development
+
+test:
+  adapter: postgresql
+  username: postgres
+  password:
+  # host: ruptiva_postgres
+  host: 172.17.0.2
+  database: ruptiva_test

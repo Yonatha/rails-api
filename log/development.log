@@ -1,0 +1,809 @@
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:09:46 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5024.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ruptiva_development"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (114.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ruptiva_development"[0m
+  [1m[35m (112.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ruptiva_test"[0m
+  [1m[35m (450.6ms)[0m  [1m[35mCREATE DATABASE "ruptiva_development" ENCODING = 'utf8'[0m
+  [1m[35m (294.6ms)[0m  [1m[35mCREATE DATABASE "ruptiva_test" ENCODING = 'utf8'[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4555299969581174625)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20170304175157)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial NOT NULL PRIMARY KEY, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "tokens" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_uid_and_provider" ON "users"  ("uid", "provider")[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170304175157"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20170304185912)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "items" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "description" character varying, "quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170304185912"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 03:11:23.198129"], ["updated_at", "2019-05-29 03:11:23.198129"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4555299969581174625)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:11:35 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `username' for #<User:0x00005611d089bd58>):
+  
+activemodel (5.2.3) lib/active_model/attribute_methods.rb:430:in `method_missing'
+activemodel (5.2.3) lib/active_model/validator.rb:150:in `block in validate'
+activemodel (5.2.3) lib/active_model/validator.rb:149:in `each'
+activemodel (5.2.3) lib/active_model/validator.rb:149:in `validate'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:606:in `block (2 levels) in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `catch'
+activesupport (5.2.3) lib/active_support/callbacks.rb:605:in `block in default_terminator'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:816:in `_run_validate_callbacks'
+activemodel (5.2.3) lib/active_model/validations.rb:409:in `run_validations!'
+activemodel (5.2.3) lib/active_model/validations/callbacks.rb:118:in `block in run_validations!'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:816:in `_run_validation_callbacks'
+activemodel (5.2.3) lib/active_model/validations/callbacks.rb:118:in `run_validations!'
+activemodel (5.2.3) lib/active_model/validations.rb:339:in `valid?'
+activerecord (5.2.3) lib/active_record/validations.rb:67:in `valid?'
+activerecord (5.2.3) lib/active_record/validations.rb:84:in `perform_validations'
+activerecord (5.2.3) lib/active_record/validations.rb:46:in `save'
+activerecord (5.2.3) lib/active_record/transactions.rb:310:in `block (2 levels) in save'
+activerecord (5.2.3) lib/active_record/transactions.rb:387:in `block in with_transaction_returning_status'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `block in transaction'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/transaction.rb:239:in `block in within_new_transaction'
+/home/yonatha/.rbenv/versions/2.6.0/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/transaction.rb:236:in `within_new_transaction'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `transaction'
+activerecord (5.2.3) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (5.2.3) lib/active_record/transactions.rb:385:in `with_transaction_returning_status'
+activerecord (5.2.3) lib/active_record/transactions.rb:310:in `block in save'
+activerecord (5.2.3) lib/active_record/transactions.rb:325:in `rollback_active_record_state!'
+activerecord (5.2.3) lib/active_record/transactions.rb:309:in `save'
+activerecord (5.2.3) lib/active_record/suppressor.rb:44:in `save'
+devise_token_auth (0.1.43) app/controllers/devise_token_auth/registrations_controller.rb:45:in `create'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:16:21 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 214ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:16:54 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 199ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:17:31 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 198ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:18:10 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+Unpermitted parameters: :first_name, :last_name, :registration
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "email", "tokens", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["uid", "yonathalmeida@gmail.com"], ["encrypted_password", "$2a$11$sG9y3xqkpmU.UDNXK995COB/Nl8mtx.8aEkPeyGpgHf1G4xeyhDoW"], ["confirmation_token", "XM8YYwNX1ebMmdMvJVNU"], ["confirmation_sent_at", "2019-05-29 03:18:11.091695"], ["email", "yonathalmeida@gmail.com"], ["tokens", "{}"], ["created_at", "2019-05-29 03:18:11.091571"], ["updated_at", "2019-05-29 03:18:11.091571"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/yonatha/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/devise_token_auth-0.1.43/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/yonatha/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/devise_token_auth-0.1.43/app/views/devise/mailer/confirmation_instructions.html.erb (4.2ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 199.2ms
+Sent mail to yonathalmeida@gmail.com (7.1ms)
+Date: Wed, 29 May 2019 00:18:11 -0300
+From: support@myapp.com
+Reply-To: support@myapp.com
+To: yonathalmeida@gmail.com
+Message-ID: <5cedf9f37a3e7_45492b08e83af51819546@yth.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+client-config: default
+redirect-url: /
+
+<p>Welcome yonathalmeida@gmail.com!</p>
+
+<p>You can confirm your account email through the link below: </p>
+
+<p><a href="http://localhost/auth/confirmation?config=default&confirmation_token=XM8YYwNX1ebMmdMvJVNU&redirect_url=%2F">Confirm my account</a></p>
+
+Completed 200 OK in 636ms (Views: 0.3ms | ActiveRecord: 5.5ms)
+
+
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:18:50 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida2@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "first_name", "last_name", "email", "tokens", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["uid", "yonathalmeida2@gmail.com"], ["encrypted_password", "$2a$11$ePRucVly4d46YIZCyeVxPeCaCOSSbNV0i8zJtVbnNsCtrOg3of/cq"], ["confirmation_token", "q4NtRbkP5wwBy9avBVEz"], ["confirmation_sent_at", "2019-05-29 03:18:50.816175"], ["first_name", "Yonatha"], ["last_name", "Almeida"], ["email", "yonathalmeida2@gmail.com"], ["tokens", "{}"], ["created_at", "2019-05-29 03:18:50.815988"], ["updated_at", "2019-05-29 03:18:50.815988"]]
+  [1m[35m (94.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/yonatha/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/devise_token_auth-0.1.43/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/yonatha/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/devise_token_auth-0.1.43/app/views/devise/mailer/confirmation_instructions.html.erb (2.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 21.2ms
+Sent mail to yonathalmeida2@gmail.com (3.3ms)
+Date: Wed, 29 May 2019 00:18:50 -0300
+From: support@myapp.com
+Reply-To: support@myapp.com
+To: yonathalmeida2@gmail.com
+Message-ID: <5cedfa1ae6da0_45492b08e83af66c19657@yth.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+client-config: default
+redirect-url: /
+
+<p>Welcome yonathalmeida2@gmail.com!</p>
+
+<p>You can confirm your account email through the link below: </p>
+
+<p><a href="http://localhost/auth/confirmation?config=default&confirmation_token=q4NtRbkP5wwBy9avBVEz&redirect_url=%2F">Confirm my account</a></p>
+
+Completed 200 OK in 350ms (Views: 0.7ms | ActiveRecord: 98.8ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:19:33 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:19:54 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 212ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "ruptiva_development" ENCODING = 'utf8'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "ruptiva_test" ENCODING = 'utf8'[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (110.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ruptiva_development"[0m
+  [1m[35m (112.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ruptiva_test"[0m
+  [1m[35m (1677.8ms)[0m  [1m[35mCREATE DATABASE "ruptiva_development" ENCODING = 'utf8'[0m
+  [1m[35m (762.1ms)[0m  [1m[35mCREATE DATABASE "ruptiva_test" ENCODING = 'utf8'[0m
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4555299969581174625)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20170304175157)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial NOT NULL PRIMARY KEY, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "tokens" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_uid_and_provider" ON "users"  ("uid", "provider")[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170304175157"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20170304185912)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "items" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "description" character varying, "quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170304185912"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 03:20:38.710153"], ["updated_at", "2019-05-29 03:20:38.710153"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4555299969581174625)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:21:46 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "first_name", "last_name", "email", "tokens", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["uid", "yonathalmeida@gmail.com"], ["encrypted_password", "$2a$11$wqxbhjYZsATOPovsGnzZhep8zXvy6CSCzHCk1oA.nfvgcboLfvOtW"], ["first_name", "Yonatha"], ["last_name", "Almeida"], ["email", "yonathalmeida@gmail.com"], ["tokens", "{}"], ["created_at", "2019-05-29 03:21:46.340962"], ["updated_at", "2019-05-29 03:21:46.340962"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"expiry\":1560309706}}"], ["updated_at", "2019-05-29 03:21:46.439125"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"}}"], ["updated_at", "2019-05-29 03:21:46.540749"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 413ms (Views: 0.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "//todo" for 127.0.0.1 at 2019-05-29 00:23:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/todo"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:24:07 -0300
+Processing by ItemsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:24:31 -0300
+Processing by ItemsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2019-05-29 00:25:44 -0300
+Processing by ItemsController#create as */*
+  Parameters: {"name"=>"Mango", "description"=>"This mango is delicious.", "quantity"=>"20"}
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "hello@boggs.xyz"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 29ms (Views: 0.3ms | ActiveRecord: 17.0ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:27:16 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:27:34 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:27:50 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 223ms (Views: 0.2ms | ActiveRecord: 5.9ms)
+
+
+Started POST "//auth/" for 127.0.0.1 at 2019-05-29 00:27:56 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"first_name"=>"Yonatha", "last_name"=>"Almeida", "email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+Unpermitted parameter: :registration
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 198ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:28:17 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"expiry\":1560310097}}"], ["updated_at", "2019-05-29 03:28:17.536625"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2019-05-29 03:28:17.540035"], ["last_sign_in_at", "2019-05-29 03:28:17.540035"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2019-05-29 03:28:17.541817"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"}}"], ["updated_at", "2019-05-29 03:28:17.644159"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 422ms (Views: 0.2ms | ActiveRecord: 8.8ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:29:01 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:29:14 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:29:23 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:29:26 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmekida@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:29:41 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"expiry\":1560310181}}"], ["updated_at", "2019-05-29 03:29:41.575915"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["sign_in_count", 2], ["current_sign_in_at", "2019-05-29 03:29:41.579578"], ["updated_at", "2019-05-29 03:29:41.580648"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"}}"], ["updated_at", "2019-05-29 03:29:41.682946"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 407ms (Views: 0.2ms | ActiveRecord: 9.1ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:29:42 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"expiry\":1560310183}}"], ["updated_at", "2019-05-29 03:29:43.209997"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 3], ["current_sign_in_at", "2019-05-29 03:29:43.213527"], ["last_sign_in_at", "2019-05-29 03:29:41.579578"], ["updated_at", "2019-05-29 03:29:43.214469"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"}}"], ["updated_at", "2019-05-29 03:29:43.316756"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 415ms (Views: 0.2ms | ActiveRecord: 10.0ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:29:45 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"expiry\":1560310185}}"], ["updated_at", "2019-05-29 03:29:45.430394"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 4], ["current_sign_in_at", "2019-05-29 03:29:45.433937"], ["last_sign_in_at", "2019-05-29 03:29:43.213527"], ["updated_at", "2019-05-29 03:29:45.434871"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"}}"], ["updated_at", "2019-05-29 03:29:45.537390"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 409ms (Views: 0.2ms | ActiveRecord: 10.2ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:34:31 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"expiry\":1560310471}}"], ["updated_at", "2019-05-29 03:34:31.550258"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 5], ["current_sign_in_at", "2019-05-29 03:34:31.553906"], ["last_sign_in_at", "2019-05-29 03:29:45.433937"], ["updated_at", "2019-05-29 03:34:31.555086"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"}}"], ["updated_at", "2019-05-29 03:34:31.658325"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 400ms (Views: 0.2ms | ActiveRecord: 8.9ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:35:24 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"expiry\":1560310524}}"], ["updated_at", "2019-05-29 03:35:24.659379"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 6], ["current_sign_in_at", "2019-05-29 03:35:24.662726"], ["last_sign_in_at", "2019-05-29 03:34:31.553906"], ["updated_at", "2019-05-29 03:35:24.663757"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"}}"], ["updated_at", "2019-05-29 03:35:24.767339"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 408ms (Views: 0.2ms | ActiveRecord: 9.0ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:35:53 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"expiry\":1560310553}}"], ["updated_at", "2019-05-29 03:35:53.888814"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 7], ["current_sign_in_at", "2019-05-29 03:35:53.892387"], ["last_sign_in_at", "2019-05-29 03:35:24.662726"], ["updated_at", "2019-05-29 03:35:53.893317"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"}}"], ["updated_at", "2019-05-29 03:35:53.995672"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 410ms (Views: 0.2ms | ActiveRecord: 7.3ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:36:34 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"expiry\":1560310595}}"], ["updated_at", "2019-05-29 03:36:35.145093"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 8], ["current_sign_in_at", "2019-05-29 03:36:35.149672"], ["last_sign_in_at", "2019-05-29 03:35:53.892387"], ["updated_at", "2019-05-29 03:36:35.150802"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"}}"], ["updated_at", "2019-05-29 03:36:35.254149"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 409ms (Views: 0.2ms | ActiveRecord: 9.4ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:36:49 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"expiry\":1560310609}}"], ["updated_at", "2019-05-29 03:36:50.087012"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 9], ["current_sign_in_at", "2019-05-29 03:36:50.092721"], ["last_sign_in_at", "2019-05-29 03:36:35.149672"], ["updated_at", "2019-05-29 03:36:50.093930"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"}}"], ["updated_at", "2019-05-29 03:36:50.204447"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 426ms (Views: 0.2ms | ActiveRecord: 12.2ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:37:47 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"lLSjZhvTDNyTO7AqelDQGg\":{\"token\":\"$2a$10$yQGALRBN6L5UqtJ28vF9HuEIy0WFP3bgwu6rdSmpaM2YjU5140Ouu\",\"expiry\":1560309706,\"last_token\":\"$2a$10$TeMD42YOVKEJ/73JJNvMluuy.J4MGz1XoRjFHUorMC/dJKclvsx1e\",\"updated_at\":\"2019-05-29T00:21:46.445-03:00\"},\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"},\"QRQgSXtkgxDVvl3xHxylig\":{\"token\":\"$2a$10$KI1wmndBnfsiqJD8rLiXhe.8VtK2NvUa57TSmAJGgp6v6DId1fG6O\",\"expiry\":1560310667}}"], ["updated_at", "2019-05-29 03:37:47.842268"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 10], ["current_sign_in_at", "2019-05-29 03:37:47.846358"], ["last_sign_in_at", "2019-05-29 03:36:50.092721"], ["updated_at", "2019-05-29 03:37:47.847429"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"},\"QRQgSXtkgxDVvl3xHxylig\":{\"token\":\"$2a$10$u3bsV0u/56Y1wyxofWjRm.w1iyN45DJZQuph85zoQAvWAS3TVdOoa\",\"expiry\":1560310667,\"last_token\":\"$2a$10$KI1wmndBnfsiqJD8rLiXhe.8VtK2NvUa57TSmAJGgp6v6DId1fG6O\",\"updated_at\":\"2019-05-29T00:37:47.855-03:00\"}}"], ["updated_at", "2019-05-29 03:37:47.951159"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 412ms (Views: 0.2ms | ActiveRecord: 8.0ms)
+
+
+Started POST "//auth/sign_in" for 127.0.0.1 at 2019-05-29 00:38:22 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"yonathalmeida@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'yonathalmeida@gmail.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"fybxZwH4eGEdLiKG8pxoEg\":{\"token\":\"$2a$10$32zsJ7IC/o.aLe9LWFmBWOi9hxW9iYnDZeM7BbzLa1tu5lEHxMge.\",\"expiry\":1560310097,\"last_token\":\"$2a$10$5PYxRzSGOCZBS5ScGXOQaeHIu3z3eQcCqAdl4UqR4izI0wABHbEcy\",\"updated_at\":\"2019-05-29T00:28:17.549-03:00\"},\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"},\"QRQgSXtkgxDVvl3xHxylig\":{\"token\":\"$2a$10$u3bsV0u/56Y1wyxofWjRm.w1iyN45DJZQuph85zoQAvWAS3TVdOoa\",\"expiry\":1560310667,\"last_token\":\"$2a$10$KI1wmndBnfsiqJD8rLiXhe.8VtK2NvUa57TSmAJGgp6v6DId1fG6O\",\"updated_at\":\"2019-05-29T00:37:47.855-03:00\"},\"H8YMQbx3Y8f8hOfSsjROBg\":{\"token\":\"$2a$10$NyWVNpx0QMnvYpyZvBVpDeukTns.r8Sw.6PjWHmdfPA6j8TzoLkzm\",\"expiry\":1560310703}}"], ["updated_at", "2019-05-29 03:38:23.158434"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 11], ["current_sign_in_at", "2019-05-29 03:38:23.162690"], ["last_sign_in_at", "2019-05-29 03:37:47.846358"], ["updated_at", "2019-05-29 03:38:23.163769"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"},\"QRQgSXtkgxDVvl3xHxylig\":{\"token\":\"$2a$10$u3bsV0u/56Y1wyxofWjRm.w1iyN45DJZQuph85zoQAvWAS3TVdOoa\",\"expiry\":1560310667,\"last_token\":\"$2a$10$KI1wmndBnfsiqJD8rLiXhe.8VtK2NvUa57TSmAJGgp6v6DId1fG6O\",\"updated_at\":\"2019-05-29T00:37:47.855-03:00\"},\"H8YMQbx3Y8f8hOfSsjROBg\":{\"token\":\"$2a$10$AUX6YWs2yEbrMUjUcM6uf.i3hCbVRf5qrjmowlTOUb772R65.GZhq\",\"expiry\":1560310703,\"last_token\":\"$2a$10$NyWVNpx0QMnvYpyZvBVpDeukTns.r8Sw.6PjWHmdfPA6j8TzoLkzm\",\"updated_at\":\"2019-05-29T00:38:23.171-03:00\"}}"], ["updated_at", "2019-05-29 03:38:23.267209"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 413ms (Views: 0.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "//items" for 127.0.0.1 at 2019-05-29 00:39:25 -0300
+Processing by ItemsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "yonathalmeida@gmail.com"], ["LIMIT", 1]]
+  [1m[36mItem Load (9.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "yonathalmeida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"DvBscSoy74CCjNh71_uR6g\":{\"token\":\"$2a$10$rOgdsYP4Z/HYY549Z8EfCuY3UrXrbedimZ8v9Mp5if5Y/dP6sN4g2\",\"expiry\":1560310181,\"last_token\":\"$2a$10$s1yjnVVLCpfJj2t9hA97Ru5Qioki19blClRu.Fsrta3SHC1mYs6.m\",\"updated_at\":\"2019-05-29T00:29:41.587-03:00\"},\"r1idRnlj2Vlo0xXj-VirRA\":{\"token\":\"$2a$10$WIpp3zbWCO7uzmGAcCETbu6PPpOOSH6EdP2fPir0tMxc/dp.ML11u\",\"expiry\":1560310183,\"last_token\":\"$2a$10$4ykybjTNIqGxBK4BC9Zjpe1wlUwUPtWBuHJHDNQCKD.Keya70w2km\",\"updated_at\":\"2019-05-29T00:29:43.221-03:00\"},\"v00t2f8TBHTAcKSV3J3hMw\":{\"token\":\"$2a$10$QVQcbdVqsaEThN4Ym.QQbezKY1PpeYtVwP9d0ckWKp0pJ/ljkGwyO\",\"expiry\":1560310185,\"last_token\":\"$2a$10$1zn0Rouak28JlCv4wXIPe.YydqnC8D2vIKuDhJNNbCEHf2tp9e.2S\",\"updated_at\":\"2019-05-29T00:29:45.442-03:00\"},\"Qvk2CPm6s9bDi0ckXt6U3Q\":{\"token\":\"$2a$10$jXjDAwHQ1buPSyNsLciXTOlVFPDeR95ljSTqLcZdS7HMcX5WkHd0O\",\"expiry\":1560310471,\"last_token\":\"$2a$10$fdpvm87EJ.7JV/Ui/xeJJehDtMHPn/v4wsbIImq0UfxahtNTaVOaW\",\"updated_at\":\"2019-05-29T00:34:31.563-03:00\"},\"v30ilawBfA3gznEXd4SPkg\":{\"token\":\"$2a$10$YqggT/hRdFpAgltfFvHpHe/sAj8qgecKAUOWPcQ1wR2cgEEHULCl6\",\"expiry\":1560310524,\"last_token\":\"$2a$10$dsSXPIa1ON0Bs..JEhw5..Ym.owNEhOtEF/rFiWIpCOF54ecrVEQW\",\"updated_at\":\"2019-05-29T00:35:24.671-03:00\"},\"xL8ckgkK-p-9yFFFVkEVMQ\":{\"token\":\"$2a$10$iLD4cgfPARl8h1yGDDikDeJ2d8YE.JF/lTEu.Rt9IhexKYL9/gOSC\",\"expiry\":1560310553,\"last_token\":\"$2a$10$hy8DQGz7wAUQWRp3Vv4DDOjMxbBMPrBstC6Ginq9EpBg69AYgx1qa\",\"updated_at\":\"2019-05-29T00:35:53.900-03:00\"},\"AoTGdMlbBqFEb9fPkG20Hw\":{\"token\":\"$2a$10$qyFqlexfHCrhO0/bdAxuAes908nHAmpk9Ga34/8J9oI8bPzSbcJXu\",\"expiry\":1560310595,\"last_token\":\"$2a$10$yrQ/4mWSBOsV11ogZy.AouhPn3QAgd4fj3xIRv2Oj25tNQ3N7jX3K\",\"updated_at\":\"2019-05-29T00:36:35.158-03:00\"},\"gjO9ONlOWxPck-xf0RGvsQ\":{\"token\":\"$2a$10$.OpFW4RQafgJTmp/udpgeulxs67Mozp0RbWiVZ2N5025eG3lX.5rm\",\"expiry\":1560310610,\"last_token\":\"$2a$10$PgWSGmjippa0WXiSVuONWeI7g4VC9.MvdlpPOPkxQrGpUc/j3jfaG\",\"updated_at\":\"2019-05-29T00:36:50.103-03:00\"},\"QRQgSXtkgxDVvl3xHxylig\":{\"token\":\"$2a$10$u3bsV0u/56Y1wyxofWjRm.w1iyN45DJZQuph85zoQAvWAS3TVdOoa\",\"expiry\":1560310667,\"last_token\":\"$2a$10$KI1wmndBnfsiqJD8rLiXhe.8VtK2NvUa57TSmAJGgp6v6DId1fG6O\",\"updated_at\":\"2019-05-29T00:37:47.855-03:00\"},\"H8YMQbx3Y8f8hOfSsjROBg\":{\"token\":\"$2a$10$EjemmTaeQMGYEEckmduELO24RjSq8SBaw53Ewr6v9r1vBxgYszdfq\",\"expiry\":1560310765,\"last_token\":\"$2a$10$AUX6YWs2yEbrMUjUcM6uf.i3hCbVRf5qrjmowlTOUb772R65.GZhq\",\"updated_at\":\"2019-05-29T00:39:25.849-03:00\"}}"], ["updated_at", "2019-05-29 03:39:25.954829"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 272ms (Views: 2.8ms | ActiveRecord: 23.5ms)
+
+
+Started GET "//livros" for 127.0.0.1 at 2019-05-29 00:41:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/livros"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
