@@ -1,0 +1,39 @@
+version: "2"
+services:
+  ruptiva_api_postgresql:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgresql
+      - POSTGRES_PASSWORD=
+    network_mode: bridge
+    ports:
+      - '5432:5432'
+    volumes:
+      - '../postgres:/var/lib/postgresql/data'
+  ruptiva_api_postgresqldata:
+    container_name: ruptiva_api_postgresql_data
+    image: tianon/true
+    volumes:
+      - /var/lib/mysql
+  ruptiva_api:
+    container_name: ruptiva_api
+    build: .
+    command: bash -c bundle install --jobs 20 --retry 5; npm install; rm ./tmp/pids/server.pid; rails db:setup db:seed; rails s -p 3000 -b '0.0.0.0'
+    environment:
+      - RAILS_PORT=3000
+      - DB_USERNAME=postgresql
+      - DB_PASSWORD=
+      - DB_HOST=ruptiva_api_postgresql
+    network_mode: bridge
+    ports:
+      - '3000:3000'
+    volumes_from:
+      - ruptiva_apidata
+    links:
+      - "ruptiva_api_postgresql"
+  ruptiva_apidata:
+    image: tianon/true
+    container_name: ruptiva_apidata
+    network_mode: bridge
+    volumes:
+      - ".:/workspace"
