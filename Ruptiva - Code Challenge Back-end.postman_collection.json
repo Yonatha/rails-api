@@ -9,36 +9,35 @@
 			"name": "Usuario",
 			"item": [
 				{
-					"name": "Cadastrar",
+					"name": "create",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"first_name\": \"Yonatha\",\n\t\"last_name\": \"Almeida\",\n\t\"email\": \"yonathalmeida@gmail.com\",\n\t\"password\": \"string12345678\",\n\t\"password_confirmation\": \"string12345678\"\n}"
+							"raw": "{\n\t\"first_name\": \"Yonatha\",\n\t\"last_name\": \"Almeida\",\n\t\"email\": \"yonathalmeida@gmail.com\",\n\t\"password\": \"123456789X\",\n\t\"password_confirmation\": \"123456789X\"\n}"
 						},
 						"url": {
-							"raw": "{{baseURL}}/auth/",
+							"raw": "{{baseURL}}/auth",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
-								"auth",
-								""
+								"auth"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Entrar",
+					"name": "login",
 					"event": [
 						{
 							"listen": "test",
@@ -49,7 +48,8 @@
 									"postman.setEnvironmentVariable('client', postman.getResponseHeader(\"client\"));",
 									"postman.setEnvironmentVariable('expiry', postman.getResponseHeader(\"expiry\"));",
 									"postman.setEnvironmentVariable('token-type', postman.getResponseHeader(\"token-type\"));",
-									"postman.setEnvironmentVariable('uid', uid);"
+									"postman.setEnvironmentVariable('uid', postman.getResponseHeader(\"uid\"));",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"yonathalmeida@gmail.com\",\n\t\"password\": \"string12345678\"\n}"
+							"raw": "{\n\t\"email\": \"yonathalmeida@gmail.com\",\n\t\"password\": \"123456789X\"\n}"
 						},
 						"url": {
 							"raw": "{{baseURL}}/auth/sign_in",
@@ -81,6 +81,192 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first_name\": \"Yonatha\",\n\t\"last_name\": \"Alves Almeida\",\n\t\"current_password\":\"123456789X\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"current_password\":\"123456789X\",\n\t\"password\":\"123456789X\",\n\t\"password_confirmation\":\"123456789X\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/users/1/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "{{access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "client",
+								"value": "{{client}}",
+								"type": "text"
+							},
+							{
+								"key": "expiry",
+								"value": "{{expiry}}",
+								"type": "text"
+							},
+							{
+								"key": "token-type",
+								"value": "{{token-type}}",
+								"type": "text"
+							},
+							{
+								"key": "uid",
+								"value": "{{uid}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/auth/validate_token",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"validate_token"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -88,7 +274,7 @@
 			"name": "Livros",
 			"item": [
 				{
-					"name": "Listar",
+					"name": "index",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -125,6 +311,148 @@
 							],
 							"path": [
 								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/livros/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"livros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/livros/5",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"livros",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access-token",
+								"type": "text",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "client",
+								"type": "text",
+								"value": "{{client}}"
+							},
+							{
+								"key": "expiry",
+								"type": "text",
+								"value": "{{expiry}}"
+							},
+							{
+								"key": "token-type",
+								"type": "text",
+								"value": "{{token-type}}"
+							},
+							{
+								"key": "uid",
+								"type": "text",
+								"value": "{{uid}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Inteligência Emocional. A teoria Revolucionária que redefine o que é ser inteligente\",\n    \"autor\": \"Daniel Goleman, p.h.D\",\n    \"capa\": \"https://images-na.ssl-images-amazon.com/images/I/41ueE4zSrAL._SY346_.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/livros/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"livros",
+								"1"
 							]
 						}
 					},

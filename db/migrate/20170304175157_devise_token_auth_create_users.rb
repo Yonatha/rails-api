@@ -38,6 +38,8 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.0]
       t.string :last_name
       t.string :email
 
+      t.boolean :allow_password_change
+
       ## Tokens
       t.text :tokens
 
